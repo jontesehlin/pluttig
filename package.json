@@ -1,0 +1,13 @@
+{
+	"name": "Ghost-Deploy",
+	"description": "",
+	"main": "server.js",
+	"dependencies": {
+		"express": "latest",
+		"thinky": "latest",
+		"express-handlebars": "latest",
+		"randomstring": "latest",
+		"body-parser": "latest",
+		"valid-url": "latest"
+	}
+}
