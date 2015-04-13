@@ -1,5 +1,5 @@
 var express = require('express'),
-    thinky = require('thinky')({'host': '46.101.58.10', 'port': 28015, 'db': 'pluttig'}),
+    thinky = require('thinky')({'host': 'IPADRESS till rethinkdb', 'port': 28015, 'db': 'pluttig'}),
     r = thinky.r,
     exphbs = require('express-handlebars'),
     randomstring = require("randomstring"),
