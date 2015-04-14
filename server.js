@@ -1,5 +1,5 @@
 var express = require('express'),
-    thinky = require('thinky')({'host': 'IPADRESS till rethinkdb', 'port': 28015, 'db': 'pluttig'}),
+    thinky = require('thinky')({'host': '46.101.58.10', 'port': 28015, 'db': 'pluttig'}),
     r = thinky.r,
     exphbs = require('express-handlebars'),
     randomstring = require("randomstring"),
@@ -28,10 +28,10 @@ var genUrl = function(req, res, prefix) {
 }
 
 var app = express();
-app.set('views', __dirname+'\\views');
+app.set('views', __dirname+'/views');
 app.set('view engine', 'hbs');
 app.set('layout', 'layouts/layout');
-app.engine('hbs', exphbs({defaultLayout: 'layout', layoutsDir: __dirname+'\\views\\layouts', extname: '.hbs'}));
+app.engine('hbs', exphbs({defaultLayout: 'layout', layoutsDir: __dirname+'/views/layouts', extname: '.hbs'}));
 app.use('/static', express.static(__dirname + '/static'));
 app.use(bodyParser.json());
 
@@ -68,10 +68,8 @@ app.route('/').post(function(req, res) {
 });
 
 app.route('/:prefix').get(function(req, res) {
-  console.log(req.params.prefix);
   plutties.get(req.params.prefix).run().then(function(plutti) {
-    res.redirect(301, 'http://'+plutti.url);
-    //console.log(plutti.url)
+    res.redirect(301, ''+plutti.url);
   }).error(fourofour(req, res));
 });
 
