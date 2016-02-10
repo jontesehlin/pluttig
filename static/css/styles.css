@@ -13,7 +13,7 @@ body, input {
 }
 
 div.plutti {
-  width: 50%;
+  width: auto;
   height: 200px;
   min-width: 300px;
   position: relative;
@@ -116,6 +116,21 @@ div.button:hover {
 }
 
 
+
 .message {
   color: #46c02f;
+}
+
+.github {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  padding: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.github a {
+  background: url('/img/GitHub-Mark-32pn.png');
+  width: 32px;
+  height: 32px;
 }

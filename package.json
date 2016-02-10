@@ -1,6 +1,6 @@
 {
-	"name": "Ghost-Deploy",
-	"description": "",
+	"name": "Plutti",
+	"description": "URL Shortening service",
 	"main": "server.js",
 	"dependencies": {
 		"express": "latest",
