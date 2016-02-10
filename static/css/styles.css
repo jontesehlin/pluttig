@@ -128,9 +128,11 @@ div.button:hover {
   padding: 0px;
   right: 0px;
   bottom: 0px;
+  margin: 5px;
 }
 .github a {
-  background: url('static/img/GitHub-Mark-32px.png');
+  background: url('/static/img/GitHub-Mark-32px.png');
   width: 32px;
   height: 32px;
+  display:block;
 }
